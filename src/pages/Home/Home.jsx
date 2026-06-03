@@ -1,16 +1,11 @@
-import Navbar from "../../components/Navbar/Navbar";
-import Hero from "../../components/HeroSection/HeroSection";
-import AboutSection from "../../components/AboutSection/AboutSection";
-import Footer from "../../components/Footer/Footer";
+import MainLayout from "../../components/layout/MainLayout/MainLayout";
+import HeroSection from "../../components/HeroSection/HeroSection";
 
 function Home() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <AboutSection />
-      <Footer />
-    </>
+    <MainLayout>
+      <HeroSection />
+    </MainLayout>
   );
 }
 
