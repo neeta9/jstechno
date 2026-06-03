@@ -1,9 +1,13 @@
 import "./PageBanner.css";
 
-function PageBanner({ title }) {
+function PageBanner({ title, subtitle }) {
   return (
     <section className="page-banner">
-      <h1>{title}</h1>
+      <div className="banner-overlay"></div>
+      <div className="banner-content">
+        <h1>{title}</h1>
+        {subtitle && <p>{subtitle}</p>}
+      </div>
     </section>
   );
 }

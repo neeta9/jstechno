@@ -1,0 +1,155 @@
+/* Clients Section */
+.clients-section {
+  background-color: #1a3a4a;
+  padding: 80px 20px;
+}
+
+.clients-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.clients-header {
+  text-align: center;
+  margin-bottom: 60px;
+  color: white;
+}
+
+.clients-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.clients-subtitle {
+  font-size: 16px;
+  color: #c0c7d0;
+  margin: 0;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.client-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.client-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #c41e3a;
+  box-shadow: 0 15px 35px rgba(196, 30, 58, 0.3);
+}
+
+.client-logo {
+  width: 100px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.1) 0%, rgba(196, 30, 58, 0.05) 100%);
+  border: 1px solid rgba(196, 30, 58, 0.2);
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+  font-size: 11px;
+  text-align: center;
+  padding: 8px;
+}
+
+.client-name {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .clients-section {
+    padding: 60px 15px;
+  }
+
+  .clients-title {
+    font-size: 32px;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .client-card {
+    padding: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .clients-section {
+    padding: 50px 12px;
+  }
+
+  .clients-title {
+    font-size: 26px;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .client-card {
+    padding: 20px;
+  }
+
+  .client-logo {
+    width: 80px;
+    height: 50px;
+    font-size: 11px;
+  }
+
+  .client-name {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-section {
+    padding: 40px 10px;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .client-card {
+    padding: 15px;
+  }
+
+  .client-logo {
+    width: 70px;
+    height: 45px;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .client-name {
+    font-size: 11px;
+  }
+}
+
+

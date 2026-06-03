@@ -1,0 +1,274 @@
+/* Service Detail Pages - Base Styles */
+.service-detail-section {
+  background-color: white;
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.service-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.service-intro h2 {
+  font-size: 40px;
+  color: #1a3a4a;
+  margin: 0 0 20px 0;
+  font-weight: 800;
+}
+
+.service-intro p {
+  font-size: 16px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Features Grid */
+.features-grid,
+.services-list,
+.advantages-section,
+.benefits-section,
+.equipment-fleet,
+.features-section,
+.workforce-section {
+  margin-bottom: 60px;
+}
+
+.features-grid h3,
+.services-list h3,
+.advantages-section h3,
+.benefits-section h3,
+.equipment-fleet h3,
+.features-section h3,
+.workforce-section h3,
+.capabilities-section h3 {
+  font-size: 32px;
+  color: #1a3a4a;
+  margin: 0 0 30px 0;
+  font-weight: 800;
+  text-align: center;
+}
+
+.features-list,
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.feature-item,
+.service-item {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 4px solid #c41e3a;
+}
+
+.feature-icon,
+.service-icon {
+  font-size: 28px;
+  margin-right: 12px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feature-item p,
+.service-item p {
+  margin: 0;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Cards Grid */
+.capabilities-grid,
+.advantages-grid,
+.benefits-grid,
+.equipment-grid,
+.workforce-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.capability-card,
+.advantage-card,
+.benefit-card,
+.equipment-card,
+.workforce-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  border-top: 4px solid #c41e3a;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.capability-card:hover,
+.advantage-card:hover,
+.benefit-card:hover,
+.equipment-card:hover,
+.workforce-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(196, 30, 58, 0.15);
+}
+
+.capability-card h4,
+.advantage-card h4,
+.benefit-card h4,
+.equipment-card h4,
+.workforce-card h4 {
+  font-size: 18px;
+  color: #1a3a4a;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.capability-card p,
+.advantage-card p,
+.benefit-card p,
+.equipment-card p,
+.workforce-card p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.equipment-count,
+.workforce-count {
+  font-size: 32px;
+  font-weight: 800;
+  color: #c41e3a;
+  margin-bottom: 12px;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #1a3a4a 0%, #1a3a4a 100%);
+  color: white;
+  padding: 50px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cta-section h3 {
+  font-size: 28px;
+  margin: 0 0 12px 0;
+  font-weight: 800;
+}
+
+.cta-section p {
+  font-size: 16px;
+  margin: 0 0 25px 0;
+  opacity: 0.95;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 35px;
+  background-color: #c41e3a;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #a01730;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-detail-section {
+    padding: 50px 12px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .service-intro h2 {
+    font-size: 28px;
+  }
+
+  .service-intro p {
+    font-size: 14px;
+  }
+
+  .features-grid h3,
+  .services-list h3,
+  .capabilities-section h3 {
+    font-size: 24px;
+  }
+
+  .cta-section {
+    padding: 30px;
+  }
+
+  .cta-section h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-detail-section {
+    padding: 40px 10px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .service-intro h2 {
+    font-size: 22px;
+  }
+
+  .service-intro p {
+    font-size: 13px;
+  }
+
+  .features-list,
+  .services-grid,
+  .capabilities-grid,
+  .advantages-grid,
+  .benefits-grid,
+  .equipment-grid,
+  .workforce-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .capability-card,
+  .advantage-card,
+  .benefit-card,
+  .equipment-card,
+  .workforce-card {
+    padding: 20px;
+  }
+
+  .cta-section {
+    padding: 20px;
+  }
+
+  .cta-section h3 {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    padding: 10px 25px;
+    font-size: 12px;
+  }
+}
+
+
