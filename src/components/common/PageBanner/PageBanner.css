@@ -1,0 +1,19 @@
+.page-banner {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b
+  );
+
+  color: white;
+}
+
+.page-banner h1 {
+  font-size: 60px;
+  font-weight: 700;
+}

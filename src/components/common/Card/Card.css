@@ -1,0 +1,11 @@
+.custom-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+}
