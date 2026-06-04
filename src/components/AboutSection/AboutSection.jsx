@@ -1,4 +1,5 @@
 import "./AboutSection.css";
+import { Link } from "react-router-dom";
 
 function AboutSection() {
   const features = [
@@ -42,9 +43,9 @@ function AboutSection() {
               ))}
             </ul>
 
-            <a href="/about" className="know-more-btn">
+            <Link to="/about" className="know-more-btn">
               KNOW MORE ABOUT US →
-            </a>
+            </Link>
           </div>
         </div>
       </div>

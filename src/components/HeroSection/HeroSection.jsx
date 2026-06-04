@@ -1,4 +1,5 @@
 import { useState } from "react";
+import heroBg from "../../assets/images/hero_bg.jpg";
 import "./HeroSection.css";
 
 function Hero() {
@@ -22,7 +23,14 @@ function Hero() {
 
   return (
     <section className="hero-section">
-      <div className="hero-background">
+      <div
+        className="hero-background"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="hero-image-overlay"></div>
       </div>
 

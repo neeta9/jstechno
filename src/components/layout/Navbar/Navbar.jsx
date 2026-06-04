@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../../../assets/images/logo.png";
 import "./Navbar.css";
 
 function Navbar() {
@@ -28,7 +29,6 @@ function Navbar() {
     { name: "Equipment", path: "/equipment" },
     { name: "Clients", path: "/clients" },
     { name: "Careers", path: "/careers" },
-    { name: "Contact", path: "/contact" },
   ];
 
   const serviceItems = [
@@ -68,7 +68,7 @@ function Navbar() {
         <div className="nav-container">
           {/* Logo */}
           <Link to="/" className="logo" onClick={closeMenus}>
-            <span>🌐</span> South Asia Consultancy
+            <img src={logo} alt="South Asia Consultancy" className="navbar-logo" />
           </Link>
 
           {/* Hamburger Menu */}
@@ -93,44 +93,40 @@ function Navbar() {
 
             {/* Services Dropdown */}
             <li className={`dropdown ${isServicesOpen ? "active" : ""}`}>
-              <button 
+                <button 
                 className="dropdown-toggle"
                 onClick={toggleServices}
               >
                 Services
               </button>
-              {isServicesOpen && (
-                <ul className="dropdown-menu">
-                  {serviceItems.map((item, idx) => (
-                    <li key={idx}>
-                      <Link to={item.path} onClick={closeMenus}>
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <ul className={`dropdown-menu ${isServicesOpen ? "open" : ""}`}>
+                {serviceItems.map((item, idx) => (
+                  <li key={idx}>
+                    <Link to={item.path} onClick={closeMenus}>
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </li>
 
             {/* Media Dropdown */}
             <li className={`dropdown ${isMediaOpen ? "active" : ""}`}>
-              <button 
+                <button 
                 className="dropdown-toggle"
                 onClick={toggleMedia}
               >
                 Media
               </button>
-              {isMediaOpen && (
-                <ul className="dropdown-menu">
-                  {mediaItems.map((item, idx) => (
-                    <li key={idx}>
-                      <Link to={item.path} onClick={closeMenus}>
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <ul className={`dropdown-menu ${isMediaOpen ? "open" : ""}`}>
+                {mediaItems.map((item, idx) => (
+                  <li key={idx}>
+                    <Link to={item.path} onClick={closeMenus}>
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </li>
           </ul>
 
