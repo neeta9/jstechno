@@ -14,7 +14,7 @@ function ClientSuccessStory() {
 
           <div data-aos="fade-right">
 
-            <span className="uppercase tracking-[0.3em] text-[#0BB39C] text-sm font-semibold">
+           ppercase tracking <span className="u-[0.3em] text-[#0BB39C] text-sm font-semibold">
               Success Story
             </span>
 

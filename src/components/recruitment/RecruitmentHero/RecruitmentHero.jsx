@@ -1,35 +1,83 @@
-function RecruitmentHero() {
-  return (
-    <section className="bg-slate-950 text-white py-24">
-      <div className="max-w-7xl mx-auto px-6">
+import { Users, Phone } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
+function RecruitmentHero() {
+  const navigate = useNavigate();
+
+  return (
+    <section
+      className="relative h-[450px] flex items-center overflow-hidden"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-slate-950/80"></div>
+
+      <div className="relative max-w-7xl mx-auto px-6 w-full">
         <div className="max-w-4xl">
-          <span className="text-red-500 font-semibold uppercase tracking-wider">
-            Overseas Recruitment Services
+
+          <span
+            data-aos="fade-up"
+            className="uppercase tracking-[0.35em] text-red-500 text-sm font-semibold"
+          >
+            OVERSEAS RECRUITMENT SERVICES
           </span>
 
-          <h1 className="text-5xl md:text-6xl font-bold mt-4 leading-tight">
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="mt-6 text-5xl lg:text-6xl font-bold text-white leading-tight"
+          >
             Connecting Global Employers
-            With Skilled Energy Workforce
+            <span className="block text-red-500">
+              With Skilled Energy Workforce
+            </span>
           </h1>
 
-          <p className="text-slate-300 mt-6 text-lg max-w-3xl">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="mt-6 text-lg lg:text-xl text-slate-300 max-w-3xl"
+          >
             End-to-end manpower sourcing, screening,
             mobilization and deployment solutions
             for energy and industrial projects worldwide.
           </p>
 
-          <div className="flex gap-4 mt-8 flex-wrap">
-            <button className="bg-red-600 px-6 py-3 rounded-lg font-semibold">
-              Request Workforce
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className="flex flex-wrap gap-4 mt-8"
+          >
+            <button
+              onClick={() => navigate("/contact")}
+              className="group relative overflow-hidden px-8 py-4 rounded-full bg-red-600 text-white font-semibold hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(239,68,68,0.35)] transition-all duration-300 flex items-center gap-2"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                <Users size={18} />
+                Request Workforce
+              </span>
+
+              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-all duration-700"></span>
             </button>
 
-            <button className="border border-white px-6 py-3 rounded-lg font-semibold">
-              Contact Team
+            <button
+              onClick={() => navigate("/contact")}
+              className="group relative overflow-hidden px-8 py-4 rounded-full border border-white/20 text-white font-semibold hover:bg-white hover:text-slate-900 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex items-center gap-2"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                <Phone size={18} />
+                Contact Team
+              </span>
+
+              <span className="absolute inset-0 scale-x-0 origin-left bg-white group-hover:scale-x-100 transition-transform duration-500"></span>
             </button>
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
   );

@@ -1,3 +1,7 @@
+<section
+  id="operational-footprint"
+  className="py-24 bg-white"
+></section>
 function OperationalFootprint() {
   return (
     <section className="py-24 bg-white">
@@ -66,6 +70,7 @@ function OperationalFootprint() {
 
       </div>
     </section>
+    
   );
 }
 

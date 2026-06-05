@@ -5,10 +5,10 @@ function ClientsHero() {
 
   return (
     <section
-      className="relative h-[550px] flex items-center overflow-hidden"
+      className="relative h-[450px] flex items-center overflow-hidden"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(2,12,27,.78),rgba(2,12,27,.78)),url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2000')",
+          "linear-gradient(rgba(2,12,27,.80),rgba(2,12,27,.80)),url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2000')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -19,13 +19,13 @@ function ClientsHero() {
           className="max-w-4xl"
           data-aos="fade-up"
         >
-          <span className="uppercase tracking-[0.35em] text-[#0BB39C] text-sm font-semibold">
+          <span className="uppercase tracking-[0.35em] text-red-500 text-sm font-semibold">
             CLIENTS & PARTNERS
           </span>
 
           <h1 className="mt-6 text-5xl lg:text-6xl font-bold text-white leading-tight">
             Trusted By
-            <span className="block text-[#0BB39C]">
+            <span className="block text-red-500">
               Global Energy Leaders
             </span>
           </h1>
@@ -38,6 +38,8 @@ function ClientsHero() {
 
           <div className="flex flex-wrap gap-4 mt-8">
 
+            {/* Primary Button */}
+
             <button
               onClick={() => navigate("/projects")}
               className="
@@ -47,11 +49,11 @@ function ClientsHero() {
               px-8
               py-4
               rounded-full
-              bg-[#0BB39C]
+              bg-red-600
               text-white
               font-semibold
               hover:-translate-y-1
-              hover:shadow-[0_15px_35px_rgba(11,179,156,0.35)]
+              hover:shadow-[0_15px_35px_rgba(239,68,68,0.35)]
               transition-all
               duration-300
               "
@@ -60,29 +62,65 @@ function ClientsHero() {
                 View Projects
               </span>
 
-              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-all duration-700"></span>
+              <span
+                className="
+                absolute
+                inset-0
+                -translate-x-full
+                bg-gradient-to-r
+                from-transparent
+                via-white/20
+                to-transparent
+                group-hover:translate-x-full
+                transition-all
+                duration-700
+                "
+              />
             </button>
+
+            {/* Secondary Button */}
 
             <button
               onClick={() => navigate("/contact")}
               className="
+              group
+              relative
+              overflow-hidden
               px-8
               py-4
               rounded-full
               border
               border-white/20
               text-white
+              font-semibold
               hover:bg-white
               hover:text-slate-900
               hover:-translate-y-1
+              hover:shadow-xl
               transition-all
               duration-300
               "
             >
-              Contact Team
+              <span className="relative z-10">
+                Contact Team
+              </span>
+
+              <span
+                className="
+                absolute
+                inset-0
+                scale-x-0
+                origin-left
+                bg-white
+                group-hover:scale-x-100
+                transition-transform
+                duration-500
+                "
+              />
             </button>
 
           </div>
+
         </div>
 
       </div>

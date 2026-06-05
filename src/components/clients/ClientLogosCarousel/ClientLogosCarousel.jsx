@@ -27,7 +27,7 @@ function ClientLogosCarousel() {
           className="text-center mb-16"
           data-aos="fade-up"
         >
-          <span className="uppercase tracking-[0.3em] text-[#0BB39C] text-sm font-semibold">
+          <span className="uppercase tracking-[0.3em] text-red-600 text-sm font-semibold">
             Trusted Worldwide
           </span>
 
