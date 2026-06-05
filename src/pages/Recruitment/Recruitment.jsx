@@ -1,40 +1,38 @@
 import MainLayout from "../../components/layout/MainLayout/MainLayout";
-import PageBanner from "../../components/common/PageBanner/PageBanner";
-import "./Recruitment.css";
+
+import RecruitmentHero from "../../components/recruitment/RecruitmentHero/RecruitmentHero";
+import RecruitmentProcess from "../../components/recruitment/RecruitmentProcess/RecruitmentProcess";
+import RecruitmentCTA from "../../components/recruitment/RecruitmentCTA/RecruitmentCTA";
+import AboutSAC from "../../components/recruitment/AboutSAC/AboutSAC";
+
+import EngagementModels from "../../components/recruitment/EngagementModels/EngagementModels";
+import GlobalReach from "../../components/recruitment/GlobalReach/GlobalReach";
+import Certifications from "../../components/recruitment/Certifications/Certifications";
+import CredibilityStats from "../../components/recruitment/CredibilityStats/CredibilityStats";
+import WorkforceServices from "../../components/recruitment/WorkforceServices/WorkforceServices";
+import ShutdownSpecialists from "../../components/recruitment/ShutdownSpecialists/ShutdownSpecialists";
+import WhyChooseSAC from "../../components/recruitment/WhyChooseSAC/WhyChooseSAC";
+import IndustriesServed from "../../components/recruitment/IndustriesServed/IndustriesServed";
+import InquiryForm from "../../components/recruitment/InquiryForm/InquiryForm";
 
 function Recruitment() {
-  const opportunities = [
-    { title: "Experienced Professionals", count: "50+" },
-    { title: "Fresh Graduates", count: "30+" },
-    { title: "Skilled Technicians", count: "80+" },
-    { title: "Safety Officers", count: "15+" },
-  ];
-
   return (
     <MainLayout>
-      <PageBanner title="Recruitment" />
-      
-      <section className="recruitment-section">
-        <div className="container">
-          <p className="intro-text">
-            Join our team of talented professionals dedicated to delivering excellence in the energy sector. We offer competitive compensation and great career growth opportunities.
-          </p>
-
-          <div className="opportunities-grid">
-            {opportunities.map((opp, idx) => (
-              <div key={idx} className="opportunity-card">
-                <div className="opp-count">{opp.count}</div>
-                <h3>{opp.title}</h3>
-              </div>
-            ))}
-          </div>
-
-          <div className="recruitment-cta">
-            <p>Ready to join our team?</p>
-            <a href="/contact" className="cta-button">Apply Now</a>
-          </div>
-        </div>
-      </section>
+      <RecruitmentHero />
+      <Certifications />
+      <CredibilityStats />
+      <AboutSAC />
+      <WorkforceServices />
+      <ShutdownSpecialists />
+      {/* <WorkforceCategories />
+      <KeyStrengths /> */}
+      <EngagementModels />
+      <WhyChooseSAC />
+      <RecruitmentProcess />
+      <IndustriesServed />
+      <GlobalReach />
+      <RecruitmentCTA />
+      <InquiryForm />
     </MainLayout>
   );
 }

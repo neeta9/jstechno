@@ -19,6 +19,10 @@ import Blogs from "../pages/Media/Blogs/Blogs";
 import News from "../pages/Media/News/News";
 import Gallery from "../pages/Gallery/Gallery";
 import Contact from "../pages/Contact/Contact";
+// import ProjectDetail from "../pages/ProjectDetail/ProjectDetail";
+import IndustryDetail from "../pages/IndustryDetail/IndustryDetail";
+// import ServiceDetail from "../pages/ServiceDetail/ServiceDetail";
+
 
 function AppRoutes() {
   return (
@@ -42,6 +46,11 @@ function AppRoutes() {
       <Route path="/media/news" element={<News />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/contact" element={<Contact />} />
+      {/* <Route path="/projects/:slug" element={<ProjectDetail />} /> */}
+
+      <Route path="/industries/:slug" element={<IndustryDetail />} />
+
+      {/* <Route path="/services/:slug" element={<ServiceDetail />} /> */}
     </Routes>
   );
 }
