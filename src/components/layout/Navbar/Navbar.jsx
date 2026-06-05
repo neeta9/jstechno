@@ -1,142 +1,317 @@
+
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "../../../assets/images/logo.png";
-import "./Navbar.css";
 
 function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isMediaOpen, setIsMediaOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mediaOpen, setMediaOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const location = useLocation();
 
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
-  };
-
-  const toggleMedia = () => {
-    setIsMediaOpen(!isMediaOpen);
-  };
-
-  const menuItems = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Industries", path: "/industries" },
-    { name: "Recruitment", path: "/recruitment" },
-    { name: "Projects", path: "/projects" },
-    { name: "Equipment", path: "/equipment" },
-    { name: "Clients", path: "/clients" },
-    { name: "Careers", path: "/careers" },
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "About Us", path: "/about" },
+    { label: "Industries", path: "/industries" },
+    { label: "Recruitment", path: "/recruitment" },
+    { label: "Projects", path: "/projects" },
+    { label: "Equipment", path: "/equipment" },
+    { label: "Clients", path: "/clients" },
+    { label: "Careers", path: "/careers" },
   ];
 
   const serviceItems = [
-    { name: "All Services", path: "/services" },
-    { name: "Drilling Services", path: "/services/drilling" },
-    { name: "Workover & Completion", path: "/services/workover-completion" },
-    { name: "Operation & Maintenance", path: "/services/oam" },
-    { name: "Oilfield Equipment", path: "/services/equipment" },
-    { name: "Manpower Supply", path: "/services/manpower" },
+    { label: "All Services", path: "/services" },
+    { label: "Drilling Services", path: "/services#drilling" },
+    { label: "Workover & Completion", path: "/services#workover" },
+    { label: "Operation & Maintenance", path: "/services#om" },
+    { label: "Oilfield Equipment", path: "/services#equipment" },
+    { label: "Manpower Supply", path: "/services#manpower" },
   ];
 
   const mediaItems = [
-    { name: "Media Hub", path: "/media" },
-    { name: "Blogs", path: "/media/blogs" },
-    { name: "News", path: "/media/news" },
-    { name: "Gallery", path: "/gallery" },
+    { label: "Media Hub", path: "/media" },
+    { label: "Blogs", path: "/media/blogs" },
+    { label: "News", path: "/media/news" },
+    { label: "Gallery", path: "/gallery" },
   ];
 
-  const closeMenus = () => {
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
-    setIsMediaOpen(false);
-  };
+  const DropdownLink = ({ item }) => (
+    <Link
+      to={item.path}
+      className="
+      group
+      relative
+      block
+      px-6
+      py-4
+      text-slate-800
+      font-medium
+      overflow-hidden
+      hover:text-red-600
+      transition-all
+      duration-300
+      "
+    >
+      {item.label}
+
+      <span
+        className="
+        absolute
+        bottom-0
+        left-0
+        h-[2px]
+        w-0
+        bg-red-600
+        transition-all
+        duration-300
+        group-hover:w-full
+        "
+      />
+    </Link>
+  );
 
   return (
-    <>
-      {/* Top Contact Bar */}
-      <div className="top-bar">
-        <div className="top-bar-container">
-          <span>📧 info@southasiaconsultancy.com</span>
-          <span>📞 +971 4 323 4567</span>
-        </div>
-      </div>
+    <header className="sticky top-0 z-[999] bg-[#071A2F] shadow-lg">
 
-      {/* Main Navbar */}
-      <nav className="navbar">
-        <div className="nav-container">
-          {/* Logo */}
-          <Link to="/" className="logo" onClick={closeMenus}>
-            <img src={logo} alt="South Asia Consultancy" className="navbar-logo" />
-          </Link>
+      <nav className="max-w-[1500px] mx-auto h-[80px] px-4 flex items-center justify-between">
 
-          {/* Hamburger Menu */}
-          <div 
-            className={`hamburger ${isMenuOpen ? "active" : ""}`}
-            onClick={toggleMenu}
+        {/* Logo */}
+
+        <Link
+          to="/"
+          className="shrink-0 mr-8"
+        >
+          <img
+            src={logo}
+            alt="South Asia Consultancy"
+            className="h-10 sm:h-12 lg:h-14 object-contain"
+          />
+        </Link>
+
+        {/* Desktop Menu */}
+
+        <div className="hidden xl:flex items-center justify-center gap-7 flex-1">
+
+          {navItems.map((item) => (
+            <Link
+              key={item.label}
+              to={item.path}
+              className={`group relative whitespace-nowrap font-medium transition-all duration-300 hover:text-red-500 ${
+                location.pathname === item.path
+                  ? "text-red-500"
+                  : "text-white"
+              }`}
+            >
+              {item.label}
+
+              <span
+                className={`absolute -bottom-2 left-0 h-[2px] bg-red-500 transition-all duration-300 ${
+                  location.pathname === item.path
+                    ? "w-full"
+                    : "w-0 group-hover:w-full"
+                }`}
+              />
+            </Link>
+          ))}
+
+          {/* Services */}
+
+          <div
+            className="relative flex items-center h-full"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <button className="group relative flex items-center gap-1 text-white hover:text-red-500 transition whitespace-nowrap">
+
+              Services
+
+              <ChevronDown size={16} />
+
+              <span className="absolute -bottom-2 left-0 h-[2px] bg-red-500 transition-all duration-300 w-0 group-hover:w-full" />
+
+            </button>
+
+            {servicesOpen && (
+              <div className="absolute top-full left-0 pt-2 w-72">
+                <div className="bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.18)] overflow-hidden border border-slate-200">
+
+                  {serviceItems.map((item) => (
+                    <DropdownLink
+                      key={item.label}
+                      item={item}
+                    />
+                  ))}
+
+                </div>
+              </div>
+            )}
           </div>
 
-          {/* Menu Items */}
-          <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-            {menuItems.map((item, idx) => (
-              <li key={idx}>
-                <Link to={item.path} onClick={closeMenus}>
-                  {item.name}
-                </Link>
-              </li>
+          {/* Media */}
+
+          <div
+            className="relative flex items-center h-full"
+            onMouseEnter={() => setMediaOpen(true)}
+            onMouseLeave={() => setMediaOpen(false)}
+          >
+            <button className="group relative flex items-center gap-1 text-white hover:text-red-500 transition whitespace-nowrap">
+
+              Media
+
+              <ChevronDown size={16} />
+
+              <span className="absolute -bottom-2 left-0 h-[2px] bg-red-500 transition-all duration-300 w-0 group-hover:w-full" />
+
+            </button>
+
+            {mediaOpen && (
+              <div className="absolute top-full left-0 pt-2 w-64">
+                <div className="bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.18)] overflow-hidden border border-slate-200">
+
+                  {mediaItems.map((item) => (
+                    <DropdownLink
+                      key={item.label}
+                      item={item}
+                    />
+                  ))}
+
+                </div>
+              </div>
+            )}
+          </div>
+
+        </div>
+
+        {/* CTA */}
+
+        <Link
+          to="/contact"
+          className="
+          hidden
+          xl:flex
+          items-center
+          justify-center
+          px-14
+          h-12
+          bg-red-600
+          text-white
+          rounded-full
+          font-semibold
+          whitespace-nowrap
+          hover:bg-red-700
+          hover:-translate-y-1
+          transition-all
+          duration-300
+          "
+        >
+          Get A Quote
+        </Link>
+
+        {/* Mobile Menu Button */}
+
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="xl:hidden text-white"
+        >
+          {mobileOpen ? (
+            <X size={30} />
+          ) : (
+            <Menu size={30} />
+          )}
+        </button>
+
+      </nav>
+
+      {/* Mobile Menu */}
+
+      {mobileOpen && (
+        <div
+          className="
+          xl:hidden
+          bg-[#071A2F]
+          border-t
+          border-white/10
+          max-h-[calc(100vh-80px)]
+          overflow-y-auto
+          "
+        >
+          <div className="flex flex-col px-6 py-6">
+
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                to={item.path}
+                onClick={() => setMobileOpen(false)}
+                className={`py-3 text-lg ${
+                  location.pathname === item.path
+                    ? "text-red-500"
+                    : "text-white"
+                }`}
+              >
+                {item.label}
+              </Link>
             ))}
 
-            {/* Services Dropdown */}
-            <li className={`dropdown ${isServicesOpen ? "active" : ""}`}>
-                <button 
-                className="dropdown-toggle"
-                onClick={toggleServices}
-              >
+            <div className="mt-4 pt-4 border-t border-white/10">
+              <p className="text-red-500 font-semibold mb-3">
                 Services
-              </button>
-              <ul className={`dropdown-menu ${isServicesOpen ? "open" : ""}`}>
-                {serviceItems.map((item, idx) => (
-                  <li key={idx}>
-                    <Link to={item.path} onClick={closeMenus}>
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
+              </p>
 
-            {/* Media Dropdown */}
-            <li className={`dropdown ${isMediaOpen ? "active" : ""}`}>
-                <button 
-                className="dropdown-toggle"
-                onClick={toggleMedia}
-              >
+              {serviceItems.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  onClick={() => setMobileOpen(false)}
+                  className="block py-2 pl-4 text-slate-300 hover:text-red-500"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-4 pt-4 border-t border-white/10">
+              <p className="text-red-500 font-semibold mb-3">
                 Media
-              </button>
-              <ul className={`dropdown-menu ${isMediaOpen ? "open" : ""}`}>
-                {mediaItems.map((item, idx) => (
-                  <li key={idx}>
-                    <Link to={item.path} onClick={closeMenus}>
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          </ul>
+              </p>
 
-          {/* CTA Button */}
-          <Link to="/contact" className="cta-button">
-            GET A QUOTE
-          </Link>
+              {mediaItems.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  onClick={() => setMobileOpen(false)}
+                  className="block py-2 pl-4 text-slate-300 hover:text-red-500"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-6">
+              <Link
+                to="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="
+                block
+                text-center
+                py-3
+                bg-red-600
+                text-white
+                rounded-full
+                font-semibold
+                "
+              >
+                Get A Quote
+              </Link>
+            </div>
+
+          </div>
         </div>
-      </nav>
-    </>
+      )}
+
+    </header>
   );
 }
 
