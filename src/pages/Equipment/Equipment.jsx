@@ -1,13 +1,13 @@
 import MainLayout from "../../components/layout/MainLayout/MainLayout";
 
-import EquipmentHero from "../../components/equipment/EquipmentHero/EquipmentHero";
-import EquipmentOverview from "../../components/equipment/EquipmentOverview/EquipmentOverview";
-import EquipmentCategories from "../../components/equipment/EquipmentCategories/EquipmentCategories";
-import TechnologySolutions from "../../components/equipment/TechnologySolutions/TechnologySolutions";
-import OperationalCapabilities from "../../components/equipment/OperationalCapabilities/OperationalCapabilities";
-import EquipmentStats from "../../components/equipment/EquipmentStats/EquipmentStats";
-import GlobalDeployment from "../../components/equipment/GlobalDeployment/GlobalDeployment";
-import EquipmentCTA from "../../components/equipment/EquipmentCTA/EquipmentCTA";
+import EquipmentHero from "../../components/Equipment/EquipmentHero";
+import EquipmentOverview from "../../components/Equipment/EquipmentOverview";
+import EquipmentCategories from "../../components/Equipment/EquipmentCategories";
+import TechnologySolutions from "../../components/Equipment/TechnologySolutions";
+import OperationalCapabilities from "../../components/Equipment/OperationalCapabilities";
+import EquipmentStats from "../../components/Equipment/EquipmentStats";
+import GlobalDeployment from "../../components/Equipment/GlobalDeployment";
+import EquipmentCTA from "../../components/Equipment/EquipmentCTA";
 
 function Equipment() {
   return (

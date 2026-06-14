@@ -1,22 +1,22 @@
 import MainLayout from "../../components/layout/MainLayout/MainLayout";
 
-import RecruitmentHero from "../../components/recruitment/RecruitmentHero/RecruitmentHero";
-import RecruitmentProcess from "../../components/recruitment/RecruitmentProcess/RecruitmentProcess";
-import RecruitmentCTA from "../../components/recruitment/RecruitmentCTA/RecruitmentCTA";
-import AboutSAC from "../../components/recruitment/AboutSAC/AboutSAC";
+import RecruitmentHero from "../../components/Recruitment/RecruitmentHero";
+import RecruitmentProcess from "../../components/Recruitment/RecruitmentProcess";
+import RecruitmentCTA from "../../components/Recruitment/RecruitmentCTA";
 
-import EngagementModels from "../../components/recruitment/EngagementModels/EngagementModels";
-import GlobalReach from "../../components/recruitment/GlobalReach/GlobalReach";
-import Certifications from "../../components/recruitment/Certifications/Certifications";
-import CredibilityStats from "../../components/recruitment/CredibilityStats/CredibilityStats";
-import WorkforceServices from "../../components/recruitment/WorkforceServices/WorkforceServices";
-import ShutdownSpecialists from "../../components/recruitment/ShutdownSpecialists/ShutdownSpecialists";
-import WhyChooseSAC from "../../components/recruitment/WhyChooseSAC/WhyChooseSAC";
-import IndustriesServed from "../../components/recruitment/IndustriesServed/IndustriesServed";
-import InquiryForm from "../../components/recruitment/InquiryForm/InquiryForm";
+import AboutSAC from "../../components/Recruitment/AboutSAC";
+import EngagementModels from "../../components/Recruitment/EngagementModels";
+import GlobalReach from "../../components/Recruitment/GlobalReach";
+import Certifications from "../../components/Recruitment/Certifications";
+import CredibilityStats from "../../components/Recruitment/CredibilityStats";
+import WorkforceServices from "../../components/Recruitment/WorkforceServices";
+import ShutdownSpecialists from "../../components/Recruitment/ShutdownSpecialists";
+import WhyChooseSAC from "../../components/Recruitment/WhyChooseSAC";
+import IndustriesServed from "../../components/Recruitment/IndustriesServed";
+import InquiryForm from "../../components/Recruitment/InquiryForm";
 
 function Recruitment() {
-  return (
+  return (  
     <MainLayout>
       <RecruitmentHero />
       <Certifications />

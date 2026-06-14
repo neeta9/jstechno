@@ -1,13 +1,13 @@
 import MainLayout from "../../components/layout/MainLayout/MainLayout";
 
-import ProjectsHero from "../../components/projects/ProjectsHero/ProjectsHero";
-import OperationalFootprint from "../../components/projects/OperationalFootprint/OperationalFootprint";
-import OngoingOperations from "../../components/projects/OngoingOperations/OngoingOperations";
-import CompletedProjects from "../../components/projects/CompletedProjects/CompletedProjects";
-import CaseStudies from "../../components/projects/CaseStudies/CaseStudies";
-import PerformanceMetrics from "../../components/projects/PerformanceMetrics/PerformanceMetrics";
-import GlobalProjectPresence from "../../components/projects/GlobalProjectPresence/GlobalProjectPresence";
-import ProjectsCTA from "../../components/projects/ProjectsCTA/ProjectsCTA";
+import ProjectsHero from "../../components/Projects/ProjectsHero";
+import OperationalFootprint from "../../components/Projects/OperationalFootprint";
+import OngoingOperations from "../../components/Projects/OngoingOperations";
+import CompletedProjects from "../../components/Projects/CompletedProjects";
+import CaseStudies from "../../components/Projects/CaseStudies";
+import PerformanceMetrics from "../../components/Projects/PerformanceMetrics";
+import GlobalProjectPresence from "../../components/Projects/GlobalProjectPresence";
+import ProjectsCTA from "../../components/Projects/ProjectsCTA";
 
 function Projects() {
   return (
