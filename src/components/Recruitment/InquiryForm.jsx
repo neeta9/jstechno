@@ -10,7 +10,7 @@ function InquiryForm() {
 
           {/* Left Side */}
 
-          <div>
+          <div data-aos="fade-right">
 
             <span className="text-red-600 uppercase tracking-[0.25em] text-sm font-semibold">
               Contact Us
@@ -28,7 +28,11 @@ function InquiryForm() {
 
             <div className="mt-10 space-y-6">
 
-              <div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="100"
+                className="border-l-4 border-red-600 pl-4"
+              >
                 <h4 className="font-semibold text-slate-900">
                   Ahmedabad Office
                 </h4>
@@ -38,7 +42,11 @@ function InquiryForm() {
                 </p>
               </div>
 
-              <div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="200"
+                className="border-l-4 border-red-600 pl-4"
+              >
                 <h4 className="font-semibold text-slate-900">
                   Phone
                 </h4>
@@ -48,7 +56,11 @@ function InquiryForm() {
                 </p>
               </div>
 
-              <div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="300"
+                className="border-l-4 border-red-600 pl-4"
+              >
                 <h4 className="font-semibold text-slate-900">
                   Email
                 </h4>
@@ -64,7 +76,18 @@ function InquiryForm() {
 
           {/* Right Side */}
 
-          <div className="bg-white rounded-[32px] shadow-xl p-8">
+          <div
+            data-aos="fade-left"
+            className="
+              bg-white
+              rounded-[32px]
+              shadow-xl
+              p-8
+              hover:shadow-2xl
+              transition-all
+              duration-500
+            "
+          >
 
             <form className="space-y-5">
 
@@ -73,13 +96,37 @@ function InquiryForm() {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-red-500"
+                  className="
+                    border
+                    border-slate-200
+                    rounded-xl
+                    px-4
+                    py-3
+                    outline-none
+                    transition-all
+                    duration-300
+                    focus:border-red-500
+                    focus:ring-2
+                    focus:ring-red-100
+                  "
                 />
 
                 <input
                   type="text"
                   placeholder="Company Name"
-                  className="border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-red-500"
+                  className="
+                    border
+                    border-slate-200
+                    rounded-xl
+                    px-4
+                    py-3
+                    outline-none
+                    transition-all
+                    duration-300
+                    focus:border-red-500
+                    focus:ring-2
+                    focus:ring-red-100
+                  "
                 />
 
               </div>
@@ -89,13 +136,37 @@ function InquiryForm() {
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-red-500"
+                  className="
+                    border
+                    border-slate-200
+                    rounded-xl
+                    px-4
+                    py-3
+                    outline-none
+                    transition-all
+                    duration-300
+                    focus:border-red-500
+                    focus:ring-2
+                    focus:ring-red-100
+                  "
                 />
 
                 <input
                   type="text"
                   placeholder="Phone Number"
-                  className="border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-red-500"
+                  className="
+                    border
+                    border-slate-200
+                    rounded-xl
+                    px-4
+                    py-3
+                    outline-none
+                    transition-all
+                    duration-300
+                    focus:border-red-500
+                    focus:ring-2
+                    focus:ring-red-100
+                  "
                 />
 
               </div>
@@ -103,18 +174,57 @@ function InquiryForm() {
               <input
                 type="text"
                 placeholder="Workforce Requirement"
-                className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-red-500"
+                className="
+                  w-full
+                  border
+                  border-slate-200
+                  rounded-xl
+                  px-4
+                  py-3
+                  outline-none
+                  transition-all
+                  duration-300
+                  focus:border-red-500
+                  focus:ring-2
+                  focus:ring-red-100
+                "
               />
 
               <textarea
                 rows="5"
                 placeholder="Tell us about your workforce needs..."
-                className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-red-500 resize-none"
+                className="
+                  w-full
+                  border
+                  border-slate-200
+                  rounded-xl
+                  px-4
+                  py-3
+                  outline-none
+                  resize-none
+                  transition-all
+                  duration-300
+                  focus:border-red-500
+                  focus:ring-2
+                  focus:ring-red-100
+                "
               ></textarea>
 
               <button
                 type="submit"
-                className="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-xl font-semibold transition"
+                className="
+                  w-full
+                  bg-red-600
+                  hover:bg-red-700
+                  text-white
+                  py-4
+                  rounded-xl
+                  font-semibold
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:shadow-[0_15px_30px_rgba(220,38,38,0.35)]
+                "
               >
                 Submit Inquiry
               </button>

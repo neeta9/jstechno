@@ -15,8 +15,11 @@ function IndustriesServed() {
 
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center">
-
+        {/* Section Heading */}
+        <div
+          className="text-center"
+          data-aos="fade-up"
+        >
           <span className="text-red-500 uppercase tracking-[0.25em] text-sm font-semibold">
             Industries Served
           </span>
@@ -24,14 +27,16 @@ function IndustriesServed() {
           <h2 className="mt-4 text-4xl lg:text-5xl font-bold">
             Workforce Solutions Across Critical Industries
           </h2>
-
         </div>
 
+        {/* Industry Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
 
           {industries.map((industry, index) => (
             <div
               key={industry}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
               className="
                 group
                 border
@@ -39,19 +44,69 @@ function IndustriesServed() {
                 rounded-3xl
                 p-8
                 hover:border-red-500
+                hover:-translate-y-2
+                hover:shadow-2xl
                 transition-all
                 duration-300
+                cursor-pointer
               "
             >
-              <div className="text-red-500 text-4xl font-bold">
+              {/* Number */}
+              <div
+                className="
+                  text-red-500
+                  text-4xl
+                  font-bold
+                  transition-all
+                  duration-300
+                  group-hover:scale-110
+                "
+              >
                 0{index + 1}
               </div>
 
-              <h3 className="mt-4 text-2xl font-semibold">
+              {/* Title */}
+              <h3
+                className="
+                  mt-4
+                  text-2xl
+                  font-semibold
+                  transition-colors
+                  duration-300
+                  group-hover:text-red-400
+                "
+              >
                 {industry}
               </h3>
 
-              <div className="w-0 group-hover:w-full h-[2px] bg-red-500 mt-5 transition-all duration-500"></div>
+              {/* Animated Line */}
+              <div
+                className="
+                  w-0
+                  group-hover:w-full
+                  h-[2px]
+                  bg-red-500
+                  mt-5
+                  transition-all
+                  duration-500
+                "
+              ></div>
+
+              {/* Small Description Accent */}
+              <p
+                className="
+                  mt-4
+                  text-slate-400
+                  text-sm
+                  opacity-0
+                  group-hover:opacity-100
+                  transition-all
+                  duration-300
+                "
+              >
+                Delivering specialized workforce and operational support.
+              </p>
+
             </div>
           ))}
 

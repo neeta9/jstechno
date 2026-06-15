@@ -18,8 +18,12 @@ function Home() {
     <>
     <MainLayout>
       <HomeHero />
-      <StatsBar />
-      <AboutPreview />
+
+<div className="bg-gradient-to-b from-transparent to-white">
+  <StatsBar />
+</div>
+
+<AboutPreview />
       <ServicesPreview />
       <FeaturedProjects />
       <IndustriesPreview />

@@ -1,165 +1,3 @@
-// import React, { useState } from "react";
-
-// const models = [
-//   {
-//     title: "Day Rate Model",
-//     subtitle: "Client Managed Operations",
-//     features: [
-//       "Salary Management",
-//       "Insurance Coverage",
-//       "PPE Support",
-//       "Travel Coordination",
-//       "Client Handles Local Logistics",
-//     ],
-//   },
-//   {
-//     title: "Full Deployment Model",
-//     subtitle: "Most Preferred",
-//     featured: true,
-//     features: [
-//       "Salary & Insurance",
-//       "Visa Processing",
-//       "Compliance Documentation",
-//       "Travel & Mobilization",
-//       "End-to-End Deployment",
-//     ],
-//   },
-//   {
-//     title: "Recruitment Model",
-//     subtitle: "Talent Acquisition",
-//     features: [
-//       "Candidate Sourcing",
-//       "Technical Screening",
-//       "Client Interviews",
-//       "Shortlisting Support",
-//       "Placement Assistance",
-//     ],
-//   },
-// ];
-
-// function EngagementModels() {
-//   const [activeCard, setActiveCard] = useState(1);
-
-//   return (
-//     <section className="py-20 bg-slate-50">
-//       <div className="max-w-7xl mx-auto px-6">
-
-//         {/* Heading */}
-
-//         <div className="text-center mb-14">
-
-//           <span className="text-red-600 uppercase tracking-[0.25em] text-sm font-semibold">
-//             Engagement Models
-//           </span>
-
-//           <h2 className="mt-4 text-4xl lg:text-5xl font-bold text-slate-900">
-//             Flexible Workforce Partnership Options
-//           </h2>
-
-//           <p className="mt-5 text-lg text-slate-600 max-w-3xl mx-auto">
-//             Choose a workforce engagement model that aligns with your
-//             operational and project requirements.
-//           </p>
-
-//         </div>
-
-//         {/* Cards */}
-
-//         <div className="grid lg:grid-cols-3 gap-8 items-center">
-
-//           {models.map((model, index) => {
-
-//             const isActive = activeCard === index;
-
-//             return (
-//               <div
-//                 key={index}
-//                 onMouseEnter={() => setActiveCard(index)}
-//                 onMouseLeave={() => setActiveCard(1)}
-//                 className={`
-//                   relative rounded-[28px]
-//                   overflow-visible
-//                   transition-all duration-500
-//                   cursor-pointer
-
-//                   ${
-//                     model.featured
-//                       ? "lg:scale-105 bg-gradient-to-br from-slate-900 to-blue-950 text-white"
-//                       : "bg-white"
-//                   }
-
-//                   ${
-//                     isActive
-//                       ? "border-2 border-red-500 shadow-[0_15px_40px_rgba(239,68,68,0.18)] -translate-y-3 scale-[1.02]"
-//                       : "border-2 border-slate-200 shadow-lg"
-//                   }
-//                 `}
-//               >
-
-//                 {/* Recommended Badge */}
-
-//                 {model.featured && (
-//                   <div className="absolute left-1/2 -translate-x-1/2 -top-6 z-20">
-//                     <div className="bg-red-600 text-white px-8 py-3 rounded-full shadow-xl font-semibold text-sm">
-//                       Recommended
-//                     </div>
-//                   </div>
-//                 )}
-
-//                 <div className="p-8">
-
-//                   <h3 className="text-3xl font-bold">
-//                     {model.title}
-//                   </h3>
-
-//                   <p
-//                     className={`mt-2 text-lg ${
-//                       model.featured
-//                         ? "text-slate-300"
-//                         : "text-slate-500"
-//                     }`}
-//                   >
-//                     {model.subtitle}
-//                   </p>
-
-//                   <div className="mt-8 space-y-5">
-
-//                     {model.features.map((feature) => (
-//                       <div
-//                         key={feature}
-//                         className="flex items-start gap-4"
-//                       >
-//                         <div className="w-3 h-3 rounded-full bg-red-500 mt-2"></div>
-
-//                         <span
-//                           className={`text-lg ${
-//                             model.featured
-//                               ? "text-slate-200"
-//                               : "text-slate-700"
-//                           }`}
-//                         >
-//                           {feature}
-//                         </span>
-//                       </div>
-//                     ))}
-
-//                   </div>
-
-//                 </div>
-
-//               </div>
-//             );
-//           })}
-
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default EngagementModels;
-
 import React from "react";
 import shutdownImage from "../../assets/recruitment/shutdown-specialists.png";
 
@@ -183,18 +21,25 @@ function ShutdownSpecialists() {
 
           {/* Image Side */}
 
-          <div className="relative pr-8 pb-8">
+          <div
+            className="relative pr-8 pb-8"
+            data-aos="fade-right"
+          >
 
-            <img
-              src={shutdownImage}
-              alt="Shutdown Specialists"
-              className="
-                w-full
-                rounded-[32px]
-                shadow-xl
-                object-cover
-              "
-            />
+            <div className="overflow-hidden rounded-[32px] shadow-xl group">
+              <img
+                src={shutdownImage}
+                alt="Shutdown Specialists"
+                className="
+                  w-full
+                  rounded-[32px]
+                  object-cover
+                  transition-all
+                  duration-700
+                  group-hover:scale-105
+                "
+              />
+            </div>
 
             {/* Floating Stats Card */}
 
@@ -210,6 +55,8 @@ function ShutdownSpecialists() {
                 rounded-3xl
                 shadow-2xl
               "
+              data-aos="zoom-in"
+              data-aos-delay="300"
             >
               <h3 className="text-4xl font-bold">
                 350+
@@ -224,7 +71,7 @@ function ShutdownSpecialists() {
 
           {/* Content Side */}
 
-          <div>
+          <div data-aos="fade-left">
 
             <span className="text-red-600 uppercase tracking-[0.25em] text-sm font-semibold">
               Refinery Shutdown Workforce
@@ -245,9 +92,11 @@ function ShutdownSpecialists() {
 
             <div className="mt-8 flex flex-wrap gap-3">
 
-              {specialists.map((item) => (
+              {specialists.map((item, index) => (
                 <div
                   key={item}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 75}
                   className="
                     px-4
                     py-2
@@ -258,8 +107,11 @@ function ShutdownSpecialists() {
                     text-slate-700
                     hover:border-red-500
                     hover:text-red-600
+                    hover:-translate-y-1
+                    hover:shadow-md
                     transition-all
                     duration-300
+                    cursor-pointer
                   "
                 >
                   {item}
@@ -272,7 +124,22 @@ function ShutdownSpecialists() {
 
             <div className="grid grid-cols-3 gap-4 mt-10">
 
-              <div className="border border-slate-200 rounded-2xl p-5 bg-white hover:shadow-md transition">
+              <div
+                data-aos="zoom-in"
+                data-aos-delay="100"
+                className="
+                  border
+                  border-slate-200
+                  rounded-2xl
+                  p-5
+                  bg-white
+                  hover:shadow-xl
+                  hover:-translate-y-2
+                  transition-all
+                  duration-300
+                  text-center
+                "
+              >
                 <h3 className="text-3xl font-bold text-red-600">
                   72h
                 </h3>
@@ -282,7 +149,22 @@ function ShutdownSpecialists() {
                 </p>
               </div>
 
-              <div className="border border-slate-200 rounded-2xl p-5 bg-white hover:shadow-md transition">
+              <div
+                data-aos="zoom-in"
+                data-aos-delay="200"
+                className="
+                  border
+                  border-slate-200
+                  rounded-2xl
+                  p-5
+                  bg-white
+                  hover:shadow-xl
+                  hover:-translate-y-2
+                  transition-all
+                  duration-300
+                  text-center
+                "
+              >
                 <h3 className="text-3xl font-bold text-red-600">
                   40+
                 </h3>
@@ -292,7 +174,22 @@ function ShutdownSpecialists() {
                 </p>
               </div>
 
-              <div className="border border-slate-200 rounded-2xl p-5 bg-white hover:shadow-md transition">
+              <div
+                data-aos="zoom-in"
+                data-aos-delay="300"
+                className="
+                  border
+                  border-slate-200
+                  rounded-2xl
+                  p-5
+                  bg-white
+                  hover:shadow-xl
+                  hover:-translate-y-2
+                  transition-all
+                  duration-300
+                  text-center
+                "
+              >
                 <h3 className="text-3xl font-bold text-red-600">
                   15+
                 </h3>
@@ -301,6 +198,7 @@ function ShutdownSpecialists() {
                   Years Experience
                 </p>
               </div>
+
             </div>
 
           </div>
