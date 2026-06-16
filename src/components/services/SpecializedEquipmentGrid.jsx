@@ -41,6 +41,48 @@ const equipment = [
     image: trainingImg,
     desc: "Operational efficiency programs and workforce development services.",
   },
+
+  {
+    title: "Workover Rig Services",
+    image:
+      "https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1200",
+    desc: "Workover and completion services supporting well intervention operations.",
+  },
+
+  {
+    title: "Operation & Maintenance Services",
+    image:
+      "https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200",
+    desc: "Maintenance programs ensuring equipment reliability and operational efficiency.",
+  },
+
+  {
+    title: "Oil & Gas Exploration",
+    image:
+      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1200",
+    desc: "Exploration support services for upstream oil and gas operations.",
+  },
+
+  {
+    title: "Mobile Steaming Unit Services",
+    image:
+      "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=1200",
+    desc: "High-pressure steaming solutions supporting field operations.",
+  },
+
+  {
+    title: "Mobile Air Compressor Services",
+    image:
+      "https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=1200",
+    desc: "Portable air compression packages for industrial and oilfield applications.",
+  },
+
+  {
+    title: "Drilling Services",
+    image:
+      "https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1200",
+    desc: "Integrated drilling services supporting offshore and onshore campaigns.",
+  },
 ];
 
 function SpecializedEquipmentGrid() {

@@ -2,6 +2,7 @@ import drillingImg from "../../assets/serviceImages/drilling.png";
 import workoverImg from "../../assets/serviceImages/workover.png";
 import omImg from "../../assets/serviceImages/om.png";
 
+
 const services = [
   {
     id: "drilling",
@@ -40,6 +41,45 @@ const services = [
     ],
     description:
       "Maintenance programs and operational support ensuring maximum uptime and reliability.",
+  },
+
+  {
+    id: "equipment",
+    title: "Oilfield Equipment Services",
+    image:"",
+    points: [
+      "Nitrogen Units",
+      "Pumping Systems",
+      "Generator Packages",
+    ],
+    description:
+      "Advanced oilfield equipment supporting drilling, intervention, production and logistics operations.",
+  },
+
+  {
+    id: "manpower",
+    title: "Manpower Supply",
+    image:"",
+    points: [
+      "Drilling Personnel",
+      "HSE Professionals",
+      "Technical Specialists",
+    ],
+    description:
+      "Skilled workforce deployment supporting offshore, onshore and infrastructure projects worldwide.",
+  },
+
+  {
+    id: "exploration",
+    title: "Oil & Gas Exploration",
+    image:"",
+    points: [
+      "Exploration Support",
+      "Field Specialists",
+      "Production Readiness",
+    ],
+    description:
+      "Operational and technical support services for exploration, production and energy development projects.",
   },
 ];
 
